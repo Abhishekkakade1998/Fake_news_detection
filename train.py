@@ -135,7 +135,7 @@ early_stop = EarlyStopping(
 )
 
 checkpoint = ModelCheckpoint(
-    "final_fake_news_model.keras",
+    "final_fake_news_model.h5",
     monitor='val_accuracy',
     save_best_only=True,
     mode='max'
@@ -231,7 +231,7 @@ plt.show()
 # ==========================================
 
 # Load best checkpoint weights before saving final model
-model.save("final_fake_news_model.keras")
+model.save("final_fake_news_model.h5")
 
 with open("tokenizer.pkl", "wb") as f:
     pickle.dump(tokenizer, f)
