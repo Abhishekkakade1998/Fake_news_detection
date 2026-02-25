@@ -15,7 +15,7 @@ model = tf.keras.models.load_model(
 with open("tokenizer.pkl", "rb") as f:
     tokenizer = pickle.load(f)
 
-max_length = 200
+max_length = 150
 
 def preprocess(text):
     text = text.lower()
